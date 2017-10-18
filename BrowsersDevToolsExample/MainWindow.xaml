@@ -28,12 +28,13 @@
                         <TabItem Header="Chrome">
                             <Grid Background="#FFE5E5E5">
                                 <Button Content="open temp profile and Developer Tools" HorizontalAlignment="Left" Margin="34,10,0,0" VerticalAlignment="Top" Width="286" Click="Button_Click"/>
-                                <Button Content="open temp Chrome headless profile and Developer Tools" HorizontalAlignment="Left" Margin="20,38,0,0" VerticalAlignment="Top" Width="317" Click="Button_Click_3"/>
+                                <Button Content="open temp Chrome headless profile and Developer Tools" HorizontalAlignment="Left" Margin="20,33,0,0" VerticalAlignment="Top" Width="317" Click="Button_Click_3"/>
                                 <Button Content="open Chrome and Chrome Developer Tools in Firefox" HorizontalAlignment="Left" Margin="21,152,0,0" VerticalAlignment="Top" Width="317" Click="Button_Click_7"/>
-                                <Button Content="open Chrome and Chrome Developer Tools in Opera" HorizontalAlignment="Left" Margin="20,63,0,0" VerticalAlignment="Top" Width="317" Click="Button_Click_9"/>
+                                <Button Content="open Chrome and Chrome Developer Tools in Opera" HorizontalAlignment="Left" Margin="20,56,0,0" VerticalAlignment="Top" Width="317" Click="Button_Click_9"/>
                                 <TextBlock HorizontalAlignment="Left" Margin="34,134,0,0" TextWrapping="Wrap" Text="TODO not work with Firefox" VerticalAlignment="Top"/>
-                                <Button Content="one more Developer Tools" HorizontalAlignment="Left" Margin="34,89,0,0" VerticalAlignment="Top" Width="160" Click="Button_Click_17"/>
-                                <Button Content="one more Developer Tools in Opera" HorizontalAlignment="Left" Margin="34,114,0,0" VerticalAlignment="Top" Width="201" Click="Button_Click_19"/>
+                                <Button Content="one more Developer Tools" HorizontalAlignment="Left" Margin="21,108,0,0" VerticalAlignment="Top" Width="160" Click="Button_Click_17"/>
+                                <Button Content="one more DT in Opera" HorizontalAlignment="Left" Margin="207,108,0,0" VerticalAlignment="Top" Width="134" Click="Button_Click_19"/>
+                                <Button Content="Chrome, Developer Tools and DT for DT" HorizontalAlignment="Left" Margin="21,81,0,0" VerticalAlignment="Top" Width="317" Click="Button_Click_22"/>
                             </Grid>
                         </TabItem>
                         <TabItem Header="Opera">

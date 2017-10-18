@@ -363,5 +363,16 @@ namespace BrowsersDevToolsExample
             var b = await webDriver.FindElementById("sb_form_go");
             if (b != null) await b.Click();
         }
+
+        private async void Button_Click_22(object sender, RoutedEventArgs e)
+        {
+            asyncChromeDriver = new AsyncChromeDriver(new ChromeDriverConfig().SetDoOpenBrowserDevTools());
+            asyncChromeDriver.BrowserDevToolsConfig = new ChromeDriverConfig().SetDoOpenBrowserDevTools();
+            browsersToClose.Add(asyncChromeDriver);
+            webDriver = new WebDriver(asyncChromeDriver);
+            await asyncChromeDriver.Connect();
+            tbDevToolsRes.Text = "opened";
+
+        }
     }
 }

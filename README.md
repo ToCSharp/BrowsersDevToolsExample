@@ -59,3 +59,12 @@ Then open AsyncChromeDriver as shown in last code. NetworkPanel will be the firs
 <br/>
 
 Developer tools opens in full Chrome window, so you can open Developer tools for opened Developer tools. :)
+Or in code: 
+```csharp
+   asyncChromeDriver = new AsyncChromeDriver(new ChromeDriverConfig().SetDoOpenBrowserDevTools());
+   asyncChromeDriver.BrowserDevToolsConfig = new ChromeDriverConfig().SetDoOpenBrowserDevTools();
+   browsersToClose.Add(asyncChromeDriver);
+   webDriver = new WebDriver(asyncChromeDriver);
+   await asyncChromeDriver.Connect();
+   tbDevToolsRes.Text = "opened";
+```  
