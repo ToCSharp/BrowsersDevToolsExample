@@ -35,8 +35,8 @@ To do it you can save http traffic first.
    await asyncChromeDriver.Connect();
 ```  
 
-Then change some files. Or take DevTools frontend from chromium project. And enable http proxy.
-
+Then change some files. Or take DevTools frontend from chromium project. And enable http proxy.  
+It will try to find file in local dir, or load it from Chrome.  
 ```csharp
    var dir = tbDevToolsFilesDir.Text;
    if (string.IsNullOrWhiteSpace(dir)) dir = Directory.GetCurrentDirectory();
