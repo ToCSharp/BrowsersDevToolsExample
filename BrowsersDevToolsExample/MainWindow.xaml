@@ -59,6 +59,7 @@
                     <TextBox x:Name="tbOpenSendKeysToInput" Grid.Column="1" Height="23" Margin="104,143,10,0" TextWrapping="Wrap" Text="hello" VerticalAlignment="Top"/>
                     <Button Content="to input" Grid.Column="1" HorizontalAlignment="Left" Margin="14,143,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_15"/>
                     <Button Content="Enter" Grid.Column="1" HorizontalAlignment="Left" Margin="14,166,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_16"/>
+                    <Button Content="bing click search" Grid.Column="1" HorizontalAlignment="Left" Margin="94,171,0,0" VerticalAlignment="Top" Width="141" Click="Button_Click_20"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Local DevTools">

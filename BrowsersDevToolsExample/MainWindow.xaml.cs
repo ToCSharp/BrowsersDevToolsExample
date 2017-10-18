@@ -356,5 +356,12 @@ namespace BrowsersDevToolsExample
             await aod.Navigation.GoToUrl(asyncChromeDriver.GetBrowserDevToolsUrl());
 
         }
+
+        private async void Button_Click_20(object sender, RoutedEventArgs e)
+        {
+            if (webDriver == null) return;
+            var b = await webDriver.FindElementById("sb_form_go");
+            if (b != null) await b.Click();
+        }
     }
 }
