@@ -1,8 +1,10 @@
-#### BrowsersDevToolsExample
+### BrowsersDevToolsExample
 
 Example of using Browser's Developer tools while using [AsyncChromeDriver](https://github.com/ToCSharp/AsyncChromeDriver), [AsyncOperaDriver](https://github.com/ToCSharp/AsyncOperaDriver) and [AsyncFirefoxDriver](https://github.com/ToCSharp/AsyncWebDriver/tree/master/AsyncFirefoxDriver).  
 
-Run built Example in release tab.  
+Run [built Example in release tab](https://github.com/ToCSharp/BrowsersDevToolsExample/releases).   
+
+[![Join the chat at https://gitter.im/AsyncWebDriver/Lobby](https://badges.gitter.im/AsyncWebDriver/Lobby.svg)](https://gitter.im/AsyncWebDriver/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [AsyncChromeDriver](https://github.com/ToCSharp/AsyncChromeDriver) connects to Chrome DevTools through WebSocket, so we can open WS proxy and route AsyncChromeDriver and one more Chrome window with DevTools through this proxy. They will work in parallel.  
 
