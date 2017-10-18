@@ -366,13 +366,20 @@ namespace BrowsersDevToolsExample
 
         private async void Button_Click_22(object sender, RoutedEventArgs e)
         {
-            asyncChromeDriver = new AsyncChromeDriver(new ChromeDriverConfig().SetDoOpenBrowserDevTools());
-            asyncChromeDriver.BrowserDevToolsConfig = new ChromeDriverConfig().SetDoOpenBrowserDevTools();
-            browsersToClose.Add(asyncChromeDriver);
-            webDriver = new WebDriver(asyncChromeDriver);
-            await asyncChromeDriver.Connect();
-            tbDevToolsRes.Text = "opened";
+            try
+            {
+                asyncChromeDriver = new AsyncChromeDriver(new ChromeDriverConfig().SetDoOpenBrowserDevTools());
+                asyncChromeDriver.BrowserDevToolsConfig = new ChromeDriverConfig().SetDoOpenBrowserDevTools();
+                browsersToClose.Add(asyncChromeDriver);
+                webDriver = new WebDriver(asyncChromeDriver);
+                await asyncChromeDriver.Connect();
+                tbDevToolsRes.Text = "opened";
 
+            }
+            catch(Exception ex)
+            {
+                tbDevToolsRes.Text = ex.ToString();
+            }
         }
     }
 }
