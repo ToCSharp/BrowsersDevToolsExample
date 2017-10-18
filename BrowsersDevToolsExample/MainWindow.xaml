@@ -1,0 +1,80 @@
+﻿<Window x:Class="BrowsersDevToolsExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BrowsersDevToolsExample"
+        mc:Ignorable="d"
+        Title="BrowsersDevTools" Height="369.28" Width="653.283" Closing="Window_Closing">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Open">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="177*"/>
+                        <ColumnDefinition Width="140*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="209"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="tbOpenUrl" Height="23" Margin="94,35,10,0" TextWrapping="Wrap" Text="https://www.google.com/" VerticalAlignment="Top" Grid.Column="1"/>
+                    <Button Content="GoToUrl" HorizontalAlignment="Left" Margin="14,38,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Grid.Column="1" Height="20"/>
+                    <TextBox x:Name="tbOpenInfo" Grid.Row="1" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
+                    <Button Content="close" HorizontalAlignment="Left" Margin="14,9,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2" Grid.Column="1" Height="20"/>
+                    <TextBox x:Name="tbOpenSaveScreenshotDir" Height="23" Margin="30,90,10,0" TextWrapping="Wrap" Text="C:\temp" VerticalAlignment="Top" Grid.Column="1"/>
+                    <Button Content="webDriver.GetScreenshot" HorizontalAlignment="Left" Margin="63,118,0,0" VerticalAlignment="Top" Width="187" Click="Button_Click_4" Grid.Column="1" Height="20"/>
+                    <TabControl>
+                        <TabItem Header="Chrome">
+                            <Grid Background="#FFE5E5E5">
+                                <Button Content="open temp profile and Developer Tools" HorizontalAlignment="Left" Margin="34,10,0,0" VerticalAlignment="Top" Width="286" Click="Button_Click"/>
+                                <Button Content="open temp Chrome headless profile and Developer Tools" HorizontalAlignment="Left" Margin="20,38,0,0" VerticalAlignment="Top" Width="317" Click="Button_Click_3"/>
+                                <Button Content="open Chrome and Chrome Developer Tools in Firefox" HorizontalAlignment="Left" Margin="21,152,0,0" VerticalAlignment="Top" Width="317" Click="Button_Click_7"/>
+                                <Button Content="open Chrome and Chrome Developer Tools in Opera" HorizontalAlignment="Left" Margin="20,63,0,0" VerticalAlignment="Top" Width="317" Click="Button_Click_9"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="34,134,0,0" TextWrapping="Wrap" Text="TODO not work with Firefox" VerticalAlignment="Top"/>
+                                <Button Content="one more Developer Tools" HorizontalAlignment="Left" Margin="34,89,0,0" VerticalAlignment="Top" Width="160" Click="Button_Click_17"/>
+                                <Button Content="one more Developer Tools in Opera" HorizontalAlignment="Left" Margin="34,114,0,0" VerticalAlignment="Top" Width="201" Click="Button_Click_19"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Opera">
+                            <Grid Background="#FFE5E5E5">
+                                <Button Content="open temp profile and Developer Tools" HorizontalAlignment="Left" Margin="34,10,0,0" VerticalAlignment="Top" Width="286" Click="Button_Click_5"/>
+                                <Button Content="open temp Opera headless profile and Developer Tools" HorizontalAlignment="Left" Margin="20,38,0,0" VerticalAlignment="Top" Width="317" Click="Button_Click_6"/>
+                                <Button Content="open Opera and Chrome Developer Tools in Chrome" HorizontalAlignment="Left" Margin="20,63,0,0" VerticalAlignment="Top" Width="317" Click="Button_Click_10"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Firefox">
+                            <Grid Background="#FFE5E5E5">
+                                <TextBox x:Name="tbOpenProfileDir" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="C:\firefox\profiles\" VerticalAlignment="Top" Width="127"/>
+                                <TextBox x:Name="tbOpenProfileName" HorizontalAlignment="Left" Height="23" Margin="142,10,0,0" TextWrapping="Wrap" Text="test5" VerticalAlignment="Top" Width="57"/>
+                                <Button Content="create profile and open with Developer Tools" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="277" Click="Button_Click_28"/>
+                                <Button Content="open profile with Developer Tools" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top" Width="202" Click="Button_Click_21" Height="20"/>
+                                <Button Content="with DevTools in XUL" HorizontalAlignment="Left" Margin="217,63,0,0" VerticalAlignment="Top" Width="124" Click="Button_Click_18" Height="20"/>
+                                <Button Content="open Developer Tools for opened Developer Tools" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Width="277" Click="Button_Click_11"/>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                    <Button Content="GoToUrl" Grid.Column="1" HorizontalAlignment="Left" Margin="14,63,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_12"/>
+                    <TextBox x:Name="tbOpenUrl2" Grid.Column="1" Height="23" Margin="94,63,10,0" TextWrapping="Wrap" Text="https://www.bing.com/" VerticalAlignment="Top"/>
+                    <TextBox x:Name="tbOpenSendKeysToInput" Grid.Column="1" Height="23" Margin="104,143,10,0" TextWrapping="Wrap" Text="hello" VerticalAlignment="Top"/>
+                    <Button Content="to input" Grid.Column="1" HorizontalAlignment="Left" Margin="14,143,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_15"/>
+                    <Button Content="Enter" Grid.Column="1" HorizontalAlignment="Left" Margin="14,166,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_16"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Local DevTools">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="158*"/>
+                        <RowDefinition Height="157*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBox x:Name="tbDevToolsFilesDir" Height="23" Margin="29,7,40,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <Button Content="open Chrome and Developer Tools and save used DevTools frontend files locally" HorizontalAlignment="Left" Margin="29,35,0,0" VerticalAlignment="Top" Width="442" Click="Button_Click_13"/>
+                    <Button Content="open Chrome and Developer Tools, use local DevToools from dir, if no one then from Chrome" HorizontalAlignment="Left" Margin="29,60,0,0" VerticalAlignment="Top" Width="527" Click="Button_Click_14"/>
+                    <TextBox x:Name="tbDevToolsRes" Grid.Row="1" TextWrapping="Wrap"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
