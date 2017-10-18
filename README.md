@@ -55,3 +55,7 @@ It will try to find file in local dir, or load it from Chrome.
 
 Try to save http traffic localy. Open inspector.js file, search for "className":"Network.NetworkPanel", change "order" to 7 near it, save.  
 Then open AsyncChromeDriver as shown in last code. NetworkPanel will be the first.
+
+<br/>
+
+Developer tools opens in full Chrome window, so you can open Developer tools for opened Developer tools. :)
