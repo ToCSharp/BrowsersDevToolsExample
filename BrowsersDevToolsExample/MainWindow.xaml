@@ -46,12 +46,13 @@
                         </TabItem>
                         <TabItem Header="Firefox">
                             <Grid Background="#FFE5E5E5">
-                                <TextBox x:Name="tbOpenProfileDir" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="C:\firefox\profiles\" VerticalAlignment="Top" Width="127"/>
-                                <TextBox x:Name="tbOpenProfileName" HorizontalAlignment="Left" Height="23" Margin="142,10,0,0" TextWrapping="Wrap" Text="test5" VerticalAlignment="Top" Width="57"/>
-                                <Button Content="create profile and open with Developer Tools" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="277" Click="Button_Click_28"/>
-                                <Button Content="open profile with Developer Tools" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top" Width="202" Click="Button_Click_21" Height="20"/>
-                                <Button Content="with DevTools in XUL" HorizontalAlignment="Left" Margin="217,63,0,0" VerticalAlignment="Top" Width="124" Click="Button_Click_18" Height="20"/>
-                                <Button Content="open Developer Tools for opened Developer Tools" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Width="277" Click="Button_Click_11"/>
+                                <Button Content="open temp profile and Developer Tools" HorizontalAlignment="Left" Margin="34,10,0,0" VerticalAlignment="Top" Width="286" Click="Button_Click_23"/>
+                                <TextBox x:Name="tbOpenProfileDir" HorizontalAlignment="Left" Height="23" Margin="10,36,0,0" TextWrapping="Wrap" Text="C:\firefox\profiles\" VerticalAlignment="Top" Width="127"/>
+                                <TextBox x:Name="tbOpenProfileName" HorizontalAlignment="Left" Height="23" Margin="142,36,0,0" TextWrapping="Wrap" Text="test5" VerticalAlignment="Top" Width="57"/>
+                                <Button Content="create profile and open with Developer Tools" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Width="277" Click="Button_Click_28"/>
+                                <Button Content="open profile with Developer Tools" HorizontalAlignment="Left" Margin="10,89,0,0" VerticalAlignment="Top" Width="202" Click="Button_Click_21" Height="20"/>
+                                <Button Content="with DevTools in XUL" HorizontalAlignment="Left" Margin="217,89,0,0" VerticalAlignment="Top" Width="124" Click="Button_Click_18" Height="20"/>
+                                <Button Content="open Developer Tools for opened Developer Tools" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="277" Click="Button_Click_11"/>
                             </Grid>
                         </TabItem>
                     </TabControl>

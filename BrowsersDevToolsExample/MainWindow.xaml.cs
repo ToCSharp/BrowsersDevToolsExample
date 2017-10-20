@@ -31,7 +31,7 @@ namespace BrowsersDevToolsExample
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            await OpenChrome(new ChromeDriverConfig().SetDoOpenBrowserDevTools());
+           await OpenChrome(new ChromeDriverConfig().SetDoOpenBrowserDevTools());
         }
 
         private async void Button_Click_1(object sender, RoutedEventArgs e)
@@ -380,6 +380,26 @@ namespace BrowsersDevToolsExample
             {
                 tbDevToolsRes.Text = ex.ToString();
             }
+        }
+
+        private async void Button_Click_23(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (webDriver != null) await webDriver.Close();
+                asyncFirefoxDriver = new AsyncFirefoxDriver(new FirefoxDriverConfig()
+                    .SetDoOpenBrowserDevTools()
+                    );
+                browsersToClose.Add(asyncFirefoxDriver);
+                webDriver = new WebDriver(asyncFirefoxDriver);
+                await webDriver.Open();
+                AddInfo("BrowserDevTools opened");
+            }
+            catch (Exception ex)
+            {
+                AddInfo(ex.ToString());
+            }
+
         }
     }
 }
