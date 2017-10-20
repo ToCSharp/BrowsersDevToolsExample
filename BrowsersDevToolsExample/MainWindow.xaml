@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BrowsersDevToolsExample"
         mc:Ignorable="d"
-        Title="BrowsersDevTools" Height="369.28" Width="653.283" Closing="Window_Closing">
+        Title="BrowsersDevTools" Height="440.476" Width="654.848" Closing="Window_Closing">
     <Grid>
         <TabControl>
             <TabItem Header="Open">
@@ -15,7 +15,7 @@
                         <ColumnDefinition Width="140*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="209"/>
+                        <RowDefinition Height="236"/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <TextBox x:Name="tbOpenUrl" Height="23" Margin="94,35,10,0" TextWrapping="Wrap" Text="https://www.google.com/" VerticalAlignment="Top" Grid.Column="1"/>
@@ -29,12 +29,16 @@
                             <Grid Background="#FFE5E5E5">
                                 <Button Content="open temp profile and Developer Tools" HorizontalAlignment="Left" Margin="34,10,0,0" VerticalAlignment="Top" Width="286" Click="Button_Click"/>
                                 <Button Content="open temp Chrome headless profile and Developer Tools" HorizontalAlignment="Left" Margin="20,33,0,0" VerticalAlignment="Top" Width="317" Click="Button_Click_3"/>
-                                <Button Content="open Chrome and Chrome Developer Tools in Firefox" HorizontalAlignment="Left" Margin="21,152,0,0" VerticalAlignment="Top" Width="317" Click="Button_Click_7"/>
+                                <Button Content="open Chrome and Chrome Developer Tools in Firefox" HorizontalAlignment="Left" Margin="21,183,0,0" VerticalAlignment="Top" Width="317" Click="Button_Click_7"/>
                                 <Button Content="open Chrome and Chrome Developer Tools in Opera" HorizontalAlignment="Left" Margin="20,56,0,0" VerticalAlignment="Top" Width="317" Click="Button_Click_9"/>
-                                <TextBlock HorizontalAlignment="Left" Margin="34,134,0,0" TextWrapping="Wrap" Text="TODO not work with Firefox" VerticalAlignment="Top"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="34,165,0,0" TextWrapping="Wrap" Text="TODO not work with Firefox" VerticalAlignment="Top"/>
                                 <Button Content="one more Developer Tools" HorizontalAlignment="Left" Margin="21,108,0,0" VerticalAlignment="Top" Width="160" Click="Button_Click_17"/>
                                 <Button Content="one more DT in Opera" HorizontalAlignment="Left" Margin="207,108,0,0" VerticalAlignment="Top" Width="134" Click="Button_Click_19"/>
                                 <Button Content="Chrome, Developer Tools and DT for DT" HorizontalAlignment="Left" Margin="21,81,0,0" VerticalAlignment="Top" Width="317" Click="Button_Click_22"/>
+                                <Button Content="network click" HorizontalAlignment="Left" Margin="21,135,0,0" VerticalAlignment="Top" Width="84" Click="Button_Click_30"/>
+                                <Button Content="sources" HorizontalAlignment="Left" Margin="110,135,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_31"/>
+                                <Button Content="elements" HorizontalAlignment="Left" Margin="192,135,0,0" VerticalAlignment="Top" Width="70" Click="Button_Click_32"/>
+                                <Button Content="console" HorizontalAlignment="Left" Margin="267,135,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_33"/>
                             </Grid>
                         </TabItem>
                         <TabItem Header="Opera">
@@ -61,12 +65,12 @@
                             </Grid>
                         </TabItem>
                     </TabControl>
-                    <Button Content="GoToUrl" Grid.Column="1" HorizontalAlignment="Left" Margin="14,63,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_12"/>
+                    <Button Content="GoToUrl" Grid.Column="1" HorizontalAlignment="Left" Margin="14,63,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_12" Height="20"/>
                     <TextBox x:Name="tbOpenUrl2" Grid.Column="1" Height="23" Margin="94,63,10,0" TextWrapping="Wrap" Text="https://www.bing.com/" VerticalAlignment="Top"/>
                     <TextBox x:Name="tbOpenSendKeysToInput" Grid.Column="1" Height="23" Margin="104,143,10,0" TextWrapping="Wrap" Text="hello" VerticalAlignment="Top"/>
-                    <Button Content="to input" Grid.Column="1" HorizontalAlignment="Left" Margin="14,143,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_15"/>
-                    <Button Content="Enter" Grid.Column="1" HorizontalAlignment="Left" Margin="14,166,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_16"/>
-                    <Button Content="bing click search" Grid.Column="1" HorizontalAlignment="Left" Margin="94,171,0,0" VerticalAlignment="Top" Width="141" Click="Button_Click_20"/>
+                    <Button Content="to input" Grid.Column="1" HorizontalAlignment="Left" Margin="14,143,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_15" Height="20"/>
+                    <Button Content="Enter" Grid.Column="1" HorizontalAlignment="Left" Margin="14,166,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_16" Height="20"/>
+                    <Button Content="bing click search" Grid.Column="1" HorizontalAlignment="Left" Margin="94,171,0,0" VerticalAlignment="Top" Width="141" Click="Button_Click_20" Height="20"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Local DevTools">

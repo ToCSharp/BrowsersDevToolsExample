@@ -466,5 +466,81 @@ namespace BrowsersDevToolsExample
                 AddInfo(ex.ToString());
             }
         }
+
+        string shadowFind = @"function recursiveFindById(root, id, els) {
+  root.querySelectorAll('*').forEach(e => {
+    if (e.id === id)
+      els.push(e);
+    if (e.shadowRoot)
+      els = recursiveFindById(e.shadowRoot, id, els);
+  });
+  return els;
+}
+";
+
+        private async void Button_Click_30(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (asyncChromeDriver?.BrowserDevTools == null) return;
+
+                var wd = new WebDriver(asyncChromeDriver.BrowserDevTools);
+                var el = await wd.ExecuteScript(shadowFind + "return recursiveFindById(document, 'tab-network', [])[0];") as AsyncWebElement;
+                await el.Click();
+            }
+            catch (Exception ex)
+            {
+                AddInfo(ex.ToString());
+            }
+        }
+
+        private async void Button_Click_31(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (asyncChromeDriver?.BrowserDevTools == null) return;
+
+                var wd = new WebDriver(asyncChromeDriver.BrowserDevTools);
+                var el = await wd.ExecuteScript(shadowFind + "return recursiveFindById(document, 'tab-sources', [])[0];") as AsyncWebElement;
+                await el.Click();
+            }
+            catch (Exception ex)
+            {
+                AddInfo(ex.ToString());
+            }
+        }
+
+        private async void Button_Click_32(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (asyncChromeDriver?.BrowserDevTools == null) return;
+
+                var wd = new WebDriver(asyncChromeDriver.BrowserDevTools);
+                var el = await wd.ExecuteScript(shadowFind + "return recursiveFindById(document, 'tab-elements', [])[0];") as AsyncWebElement;
+                await el.Click();
+            }
+            catch (Exception ex)
+            {
+                AddInfo(ex.ToString());
+            }
+        }
+
+        private async void Button_Click_33(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (asyncChromeDriver?.BrowserDevTools == null) return;
+
+                var wd = new WebDriver(asyncChromeDriver.BrowserDevTools);
+                var el = await wd.ExecuteScript(shadowFind + "return recursiveFindById(document, 'tab-console', [])[0];") as AsyncWebElement;
+                await el.Click();
+            }
+            catch (Exception ex)
+            {
+                AddInfo(ex.ToString());
+            }
+
+        }
     }
 }
