@@ -58,6 +58,7 @@ Then open AsyncChromeDriver as shown in last code. NetworkPanel will be the firs
 
 <br/>
 
+#### Developer tools for opened Developer tools
 Developer tools opens in full Chrome window, so you can open Developer tools for opened Developer tools. :)
 Or in code: 
 ```csharp
@@ -67,4 +68,19 @@ Or in code:
    webDriver = new WebDriver(asyncChromeDriver);
    await asyncChromeDriver.Connect();
    tbDevToolsRes.Text = "opened";
-```  
+```
+
+<br/>
+
+#### BrowserDevTools as AsyncWebDriver
+asyncChromeDriver.BrowserDevTools is AsyncChromeDriver, so we can interact with BrowserDevTools as AsyncWebDriver with some difficulties, because tabs behind shadowRoots. Look [example](https://github.com/ToCSharp/BrowsersDevToolsExample/blob/6ba69c0de25387a7a09a2fb67ad6bb54e212fe68/BrowsersDevToolsExample/MainWindow.xaml.cs#L470):  
+```csharp
+  var wd = new WebDriver(asyncChromeDriver.BrowserDevTools);
+  var el = await wd.ExecuteScript(shadowFind + "return recursiveFindById(document, 'tab-sources', [])[0];") as AsyncWebElement;
+  await el.Click();
+```
+Firefox BrowserDevTools also accessible, but here difficulties because they are in XUL:  
+```csharp
+  await asyncFirefoxDriver.BrowserDevTools.JavaScriptExecutor
+    .ExecuteScript("frames[0].document.getElementById('toolbox-tab-netmonitor').click();");
+```
