@@ -53,6 +53,11 @@
                                 <Button Content="open profile with Developer Tools" HorizontalAlignment="Left" Margin="10,89,0,0" VerticalAlignment="Top" Width="202" Click="Button_Click_21" Height="20"/>
                                 <Button Content="with DevTools in XUL" HorizontalAlignment="Left" Margin="217,89,0,0" VerticalAlignment="Top" Width="124" Click="Button_Click_18" Height="20"/>
                                 <Button Content="open Developer Tools for opened Developer Tools" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="277" Click="Button_Click_11"/>
+                                <Button Content="netmonitor click" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" Width="99" Click="Button_Click_24"/>
+                                <Button Content="console" HorizontalAlignment="Left" Margin="117,140,0,0" VerticalAlignment="Top" Width="62" Click="Button_Click_25"/>
+                                <Button Content="inspector" HorizontalAlignment="Left" Margin="184,140,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_26"/>
+                                <Button Content="netmonitor click in DT for DT" HorizontalAlignment="Left" Margin="11,162,0,0" VerticalAlignment="Top" Width="188" Click="Button_Click_27"/>
+                                <Button Content="inspector" HorizontalAlignment="Left" Margin="204,162,0,-1" VerticalAlignment="Top" Width="75" Click="Button_Click_29"/>
                             </Grid>
                         </TabItem>
                     </TabControl>

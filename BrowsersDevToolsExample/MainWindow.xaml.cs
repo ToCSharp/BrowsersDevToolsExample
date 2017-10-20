@@ -31,7 +31,7 @@ namespace BrowsersDevToolsExample
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-           await OpenChrome(new ChromeDriverConfig().SetDoOpenBrowserDevTools());
+            await OpenChrome(new ChromeDriverConfig().SetDoOpenBrowserDevTools());
         }
 
         private async void Button_Click_1(object sender, RoutedEventArgs e)
@@ -376,7 +376,7 @@ namespace BrowsersDevToolsExample
                 tbDevToolsRes.Text = "opened";
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 tbDevToolsRes.Text = ex.ToString();
             }
@@ -400,6 +400,71 @@ namespace BrowsersDevToolsExample
                 AddInfo(ex.ToString());
             }
 
+        }
+
+        private async void Button_Click_24(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (asyncFirefoxDriver?.BrowserDevTools == null) return;
+                await asyncFirefoxDriver.BrowserDevTools.JavaScriptExecutor.ExecuteScript("frames[0].document.getElementById('toolbox-tab-netmonitor').click();");
+            }
+            catch (Exception ex)
+            {
+                AddInfo(ex.ToString());
+            }
+        }
+
+        private async void Button_Click_25(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (asyncFirefoxDriver?.BrowserDevTools == null) return;
+                await asyncFirefoxDriver.BrowserDevTools.JavaScriptExecutor.ExecuteScript("frames[0].document.getElementById('toolbox-tab-webconsole').click();");
+            }
+            catch (Exception ex)
+            {
+                AddInfo(ex.ToString());
+            }
+        }
+
+        private async void Button_Click_26(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (asyncFirefoxDriver?.BrowserDevTools == null) return;
+                await asyncFirefoxDriver.BrowserDevTools.JavaScriptExecutor.ExecuteScript("frames[0].document.getElementById('toolbox-tab-inspector').click();");
+            }
+            catch (Exception ex)
+            {
+                AddInfo(ex.ToString());
+            }
+        }
+
+        private async void Button_Click_27(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (asyncFirefoxDriver?.BrowserDevTools?.BrowserDevTools == null) return;
+                await asyncFirefoxDriver.BrowserDevTools.BrowserDevTools.JavaScriptExecutor.ExecuteScript("frames[0].document.getElementById('toolbox-tab-netmonitor').click();");
+            }
+            catch (Exception ex)
+            {
+                AddInfo(ex.ToString());
+            }
+        }
+
+        private async void Button_Click_29(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (asyncFirefoxDriver?.BrowserDevTools?.BrowserDevTools == null) return;
+                await asyncFirefoxDriver.BrowserDevTools.BrowserDevTools.JavaScriptExecutor.ExecuteScript("frames[0].document.getElementById('toolbox-tab-inspector').click();");
+            }
+            catch (Exception ex)
+            {
+                AddInfo(ex.ToString());
+            }
         }
     }
 }
