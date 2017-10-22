@@ -65,6 +65,7 @@ namespace BrowsersDevToolsExample
                 }
                 catch { }
             }
+            browsersToClose.Clear();
 
             AddInfo("browser closed");
         }
@@ -235,6 +236,7 @@ namespace BrowsersDevToolsExample
             browsersToClose.Add(asyncFirefoxDriver);
             await asyncFirefoxDriver.Connect();
             await asyncFirefoxDriver.Navigation.GoToUrl(asyncChromeDriver.GetBrowserDevToolsUrl());
+            AddInfo("opened");
         }
 
         private async void Button_Click_9(object sender, RoutedEventArgs e)
@@ -249,6 +251,7 @@ namespace BrowsersDevToolsExample
             await asyncOperaDriver.Connect();
             await asyncOperaDriver.Navigation.GoToUrl(asyncChromeDriver.GetBrowserDevToolsUrl());
 
+            AddInfo("opened");
         }
 
         private async void Button_Click_10(object sender, RoutedEventArgs e)
@@ -373,12 +376,11 @@ namespace BrowsersDevToolsExample
                 browsersToClose.Add(asyncChromeDriver);
                 webDriver = new WebDriver(asyncChromeDriver);
                 await asyncChromeDriver.Connect();
-                tbDevToolsRes.Text = "opened";
-
+                AddInfo("opened");
             }
             catch (Exception ex)
             {
-                tbDevToolsRes.Text = ex.ToString();
+                AddInfo(ex.ToString());
             }
         }
 
