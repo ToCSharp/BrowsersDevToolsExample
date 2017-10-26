@@ -2,6 +2,7 @@
 
 Example of using Browser's Developer tools while using [AsyncChromeDriver](https://github.com/ToCSharp/AsyncChromeDriver), [AsyncOperaDriver](https://github.com/ToCSharp/AsyncOperaDriver) and [AsyncFirefoxDriver](https://github.com/ToCSharp/AsyncWebDriver/tree/master/AsyncFirefoxDriver).  
 
+Look video: https://youtu.be/dNMuoeDmEME  
 Run [built Example in release tab](https://github.com/ToCSharp/BrowsersDevToolsExample/releases).   
 
 When we open Chrome or Opera BrowserDevTools, WebSocket server starts to proxy WS traffic. So your firewall will ask you for permission. By default WebSocket server and http proxy server for DevTools frontend accepts only local connections. So it is safe.
