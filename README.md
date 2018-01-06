@@ -1,3 +1,12 @@
+## We do not need to proxy Chrome DevTools WS traffic from Chrome 63  
+https://developers.google.com/web/updates/2017/10/devtools-release-notes#multi-client  
+This project is OUT OF DATE  
+The opportunity of using Browser's Developer tools while using [AsyncChromeDriver](https://github.com/ToCSharp/AsyncChromeDriver), [AsyncOperaDriver](https://github.com/ToCSharp/AsyncOperaDriver) is good.  
+And you may further use this project. But it opens unnecessary WebSocket server (we need remove this). Someday I do it if you ask in [![Join the chat at https://gitter.im/AsyncWebDriver/Lobby](https://badges.gitter.im/AsyncWebDriver/Lobby.svg)](https://gitter.im/AsyncWebDriver/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+  
+   
+
+
 ### BrowsersDevToolsExample
 
 Example of using Browser's Developer tools while using [AsyncChromeDriver](https://github.com/ToCSharp/AsyncChromeDriver), [AsyncOperaDriver](https://github.com/ToCSharp/AsyncOperaDriver) and [AsyncFirefoxDriver](https://github.com/ToCSharp/AsyncWebDriver/tree/master/AsyncFirefoxDriver).  
